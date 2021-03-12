@@ -4,7 +4,7 @@ class MaxSumSubArray
     {
         int res = arr[0];
         int maxEnd  = arr[0];
-        for(int i = 0; i <arr.length; i +=1)
+        for(int i = 1; i <arr.length; i +=1)
         {
             maxEnd = Math.max(maxEnd + arr[i], arr[i]);
             res = Math.max(maxEnd,res);
@@ -13,7 +13,7 @@ class MaxSumSubArray
     }
     public static void main(String[] args)
     {
-        int[] arr = {-3,8,-2,4,-5,6};
+        int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
         System.out.print(maxSumSubarray(arr));
     }
 }

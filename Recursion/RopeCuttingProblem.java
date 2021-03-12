@@ -5,7 +5,7 @@ class RopeCuttingProblem
         if(n == 0) return 0;
         if(n < 0) return -1;
 
-        int res = Math.max(ropeCuts(n-1,a,b,c),Math.max(ropeCuts(n-b,a,b,c),ropeCuts(n-c,a,b,c)));
+        int res = Math.max(ropeCuts(n-a,a,b,c),Math.max(ropeCuts(n-b,a,b,c),ropeCuts(n-c,a,b,c)));
         if(res == -1) return -1;
         
         return res + 1;

@@ -29,7 +29,7 @@ class MaxCircularSubArray
     }
     public static void main(String[] args)
     {
-        int[] arr ={8,-4,3,-5,4};
+        int[] arr ={5,-3,5};
         System.out.print(maxCircularSum(arr));    
     }
 }

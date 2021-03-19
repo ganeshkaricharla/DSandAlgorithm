@@ -1,21 +1,15 @@
 class DiameterOfBinaryTree
 {
-    static int height(TreeNode root)
-    {
-        if(root == null) return 0;
-
-        return (Math.max(height(root.left),height(root.right)))+1;
-    }
+    int res = 0;
     static int diameter(TreeNode root)
     {
         if(root == null) return 0;
+        int lh = height(root.left);
+        int rh = height(root.right);
 
-        int d1 = 1 + height(root.left) + height(root.right);
+        res  = Math.max(res,lh+rh + 1);
 
-        int d2 = diameter(root.left);
-        int d3 = diameter(root.right);
-
-        return Math.max(d1,Math.max(d2,d3));
+        return 1 + Math.max(lh,rh);
     }
     public static void main(String[] args)
     {

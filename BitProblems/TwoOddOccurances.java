@@ -8,7 +8,7 @@ class TwoOddOccurances
         
         for(int i : arr) xor = xor ^ i;
 
-        int rightSet = xor & (xor - 1);
+        int rightSet = xor & (!(xor - 1));
         for(int i : arr)
         {
             if( ( i & rightSet ) == 0)  res1 = res1 ^ i;
